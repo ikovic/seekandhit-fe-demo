@@ -10,8 +10,8 @@ This project is an opportunity to demonstrate both your development skills and y
 - client provides either a list of items to search through, or a search function and a search results object
 - search items can be an array of strings or objects
 - in case of objects, client must provide getter functions to determine which property to use as a label, and which property to use as search value
-- it can be used **uncontrolled**: client provides a list of items to search in, optional getter functions as described above, and a callback when a value is selected from the list
-- it can be used **controlled**: client instead of a list provides a custom search function which will be called in place of default search function, and a prop containing the search results
+- it can be used **uncontrolled**: client provides a list of items to search in, optional getter functions as described above, and a callback when a value is selected from the list. Default search function is used internally to pick a search result from the provided list.
+- it can be used **controlled**: client provides a custom search function (instead of a list of search items) and a list of search results. Custom search function will be used instead of the default one, and component will display the results passed as props.
 
 A complete solution would include both the implementation of the component and a few examples demonstrating the controlled and uncontrolled use cases. Bonus points are awarded if the custom search function is async. Feel free to style the component as you see fit.
 
@@ -20,6 +20,7 @@ Third party packages can be used, as long as they don't help with rendering. Mea
 ## Criteria
 
 When reviewing your solution, we will pay attention to these kind of details:
+
 - correctnes of component behavior
 - potential performance issues
 - code readability
@@ -29,6 +30,7 @@ When reviewing your solution, we will pay attention to these kind of details:
 ## Development
 
 Fork this repo and install the dependencies using `npm i`. This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), so all the available documentation applies to this project too. Base scripts are:
+
 - `npm start` - start the dev server
 - `npm build` - build the production version of the app
 - `test` - run the tests in interactive mode
