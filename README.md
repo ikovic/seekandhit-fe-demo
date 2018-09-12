@@ -7,12 +7,13 @@ Base project for job candidates applying for frontend developer position at [See
 This project is an opportunity to demonstrate both your development skills and your determination to get a job done right. The task is to build a generic `Autocomplete` component. You should design its API based on these requirements:
 
 - component has a default style, but it can be extended through props
-- haystack items can be an array of strings or objects
-- in case of objects, client must provide a getter function to take the wanted property from the object
-- it can be used **uncontrolled**: client provides a list of items, mapper object in case the list consists of objects and a callback when a value is selected from the list
-- it can be used **controlled**: client also provides a custom search function which will be called in place of default search function
+- client provides either a list of items to search through, or a search function and a search results object
+- search items can be an array of strings or objects
+- in case of objects, client must provide getter functions to determine which property to use as a label, and which property to use as search value
+- it can be used **uncontrolled**: client provides a list of items to search in, optional getter functions as described above, and a callback when a value is selected from the list
+- it can be used **controlled**: client instead of a list provides a custom search function which will be called in place of default search function, and a prop containing the search results
 
-A complete solution would include both the implementation of the component and a few examples demonstrating the controlled and uncontrolled use cases. Feel free to style the component as you see fit.
+A complete solution would include both the implementation of the component and a few examples demonstrating the controlled and uncontrolled use cases. Bonus points are awarded if the custom search function is async. Feel free to style the component as you see fit.
 
 Third party packages can be used, as long as they don't help with rendering. Meaning it is OK to use a package for [fuzzy filtering](https://www.npmjs.com/package/fuse.js), but it is not OK to use complete or half-complete dropdown components like [downshift](https://www.npmjs.com/package/downshift).
 
