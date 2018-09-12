@@ -32,5 +32,5 @@ When reviewing your solution, we will pay attention to these kind of details:
 Fork this repo and install the dependencies using `npm i`. This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), so all the available documentation applies to this project too. Base scripts are:
 
 - `npm start` - start the dev server
-- `npm build` - build the production version of the app
-- `test` - run the tests in interactive mode
+- `npm run build` - build the production version of the app
+- `npm test` - run the tests in interactive mode
